@@ -1,26 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navbar from './components/Navbar'
+import { addUser } from './components/store/usersAction';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AccountForm from './components/AccountForm';
+import About from './components/About';
+import Contact from './components/Contact';
+import Home from './components/Home'
+
+
+
+class App extends Component {
+
+  addNewUser = newUser => {
+    this.props.addUser(newUser)
+  };
+
+  render() {
+    return (
+      <div className='App'>
+        <div className='router'>
+        <BrowserRouter>
+          <div>
+            <Navbar />
+            <Switch>
+                
+              <Route exact path="/Home" component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+                
+              
+            </Switch>
+          </div>
+        </BrowserRouter>
+      </div>
+        {/*<h1> DAILY EXPENSES<h1/> */}
+        <AccountForm addUser={this.addNewUser} />
+       
+
+      </div>
+    );
+  }
 }
 
-export default App;
+
+const mapStateToProps = (state) => ({
+  users: state.users
+})
+
+const mapDispatchToProps = {
+  addUser: addUser
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

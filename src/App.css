@@ -1,7 +1,21 @@
 .App {
   text-align: center;
+  margin-bottom: 20px;
 }
+.right{
+min-height: 10vh;
+background-color: khaki;
+margin-bottom: 40vh;
+padding-left:50px; 
+margin-left: 50px;
+display: inline-flex;
+flex-direction: row;
 
+  
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -15,7 +29,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,3 +50,115 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+.App-user-form{
+  width: 50%;
+        background-color: white;
+        padding: 5%;
+        margin: 0px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+
+}
+.form-control label {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.form-control input,
+textarea {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 14px;
+  padding: 5px;
+  width: 100%;
+  font-family: inherit;
+}
+
+.output-container {
+  background-color: whitesmoke;
+  color: rgb(56, 49, 49);
+  flex-basis: 60%;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.3);
+  
+
+}
+.output-info {
+  border-bottom: 0.5px solid rgb(110, 176, 176);
+  padding: 10px 20px;
+  position: relative;
+  
+  
+}
+
+.App{
+  width: 80%;
+  min-height: 90vh;
+  background-color: rgba(22, 18, 53, 0.452);
+  margin: 10px;
+  display: flex;
+  justify-items: end;
+  
+  
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+.btn {
+  background-color: rgb(238, 122, 122);
+  color: #f0f0f0;
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-weight: 600;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.item {
+  padding: 7px 0;
+  font-size: 20px;
+}
+
+.items-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-details {
+  margin-top: 13px;
+}
+
+
+.App-header {
+  background-color: #eb6ec1;
+  color: #756969;
+  text-align: center;
+  min-height: 40px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
