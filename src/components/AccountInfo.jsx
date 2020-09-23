@@ -17,10 +17,10 @@ const accountInfo = ({id, Bank_name, Branch_Address, Account_name, Account_descr
                 <p>Account Description: {Account_description}</p>
                 <p>Location:{Location}</p>
                 <p>AMOUNT_SPENT: {Amount_spent}</p>
-                <button onClick={handleClick}>DLELTE_USER</button><br />
+                <button onClick={handleClick}>delete Account</button><br />
                 <a href={`/edit/${id}`}>EDIT USER</a>
                 
-                <button>Delete account</button>
+                
             </div>
         </div>
     );
